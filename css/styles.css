@@ -272,10 +272,9 @@ main #hero #photo svg {
 }
 
 #contact {
-  margin: 0 auto;
   width: 77%;
+  margin: 0 auto;
   height: 100vh;
-  border: black solid 1px 6;
   color: white;
 }
 #contact .contact-form {
@@ -328,6 +327,18 @@ main #hero #photo svg {
   outline: 4px solid #6D99CE;
 }
 
+@media screen and (max-width: 600px) {
+  #contact {
+    width: 80%;
+  }
+  #contact .contact-form {
+    width: 100%;
+  }
+  #contact .contact-form input {
+    width: 88%;
+    margin-bottom: 0.3cm;
+  }
+}
 .social-link {
   display: inline-block;
   text-align: center;
