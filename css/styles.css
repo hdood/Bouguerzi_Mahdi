@@ -366,6 +366,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6D99CE;
+  border-radius: 5px;
+}
+
 body {
   font-family: myfont;
   margin: 0;
