@@ -1,0 +1,82 @@
+$card-border-radius: 15px ; 
+$card-img-border-radius:15px 15px 0 0 ; 
+$card-background: #616972; 
+$card-img-border-color:#6D99CE ;
+#cards {
+    // width: 90%;
+    height: 100vh;
+    display: grid;
+    margin-top: -30%;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70% 30%; 
+        justify-self: center;
+        align-self: center;
+        height: 25.8rem;
+        width: 26rem;
+        border-radius:$card-border-radius;
+        box-shadow: 4px 6px 20px -7px rgba(0,0,0,0.75);
+        background-color: $card-background;
+        .card-img{
+            border-radius:$card-img-border-radius;
+            border-bottom:$card-img-border-color solid 8px ;
+            svg {
+                transform: translate(11%,-34%) scale(0.7);
+            }
+        }
+        .card-text{
+            padding-top: 0.2cm;
+            color:white ;
+            text-align: center;
+            font-size: 1.563rem;
+            p{
+                font-size: 0.7rem;
+                line-height: 0.6cm;
+                span {
+                    font-size: 1rem;
+                }
+                #php {
+                    color: rgb(214, 189, 255);
+                }
+                #vue{
+                    color: #a5fdd4;
+                }
+                #sass{
+                    color: #ffc4e0;
+                }
+            }
+        }
+        }     
+    }
+@media screen and (max-width :600px ) {
+    #cards {
+        grid-template-columns : 1fr ;
+        .card {
+            width: 15rem ;
+            height:16rem ;
+            grid-template-rows: 60% 40%;
+            .card-img{
+                width: 15rem;
+                svg{
+                    transform: scale(0.5) translate(-30%,-97%);
+                }
+            }
+            .card-text {
+                font-size:1rem;
+                p{
+                    span {
+                        font-size: .8rem;
+                    }
+                    font-size: 0.5rem;
+                    line-height: 0.4cm;
+                   
+                    
+                }
+            } 
+        }
+    }
+}
+

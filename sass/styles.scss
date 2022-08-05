@@ -1,0 +1,33 @@
+@import "navbar";
+@import "body" ; 
+@import "stars"; 
+@import "cards"; 
+@import "questions" ;
+@import "contact" ; 
+@import "social" ; 
+
+$body-background : #4B5056 ; 
+
+@font-face {
+    font-family: myfont;
+    src: url(../fonts/LeagueSpartan-Bold.otf);
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #6D99CE;
+    border-radius: 5px;
+}
+
+body{
+    font-family: myfont;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $body-background;
+    overflow-x: hidden;
+}
+

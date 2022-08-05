@@ -1,0 +1,27 @@
+.circle {
+    border-radius :50% ; 
+    width : 4px ; 
+    height: 4px ; 
+    position:fixed ; 
+    opacity: 0.5;
+    transition: top 300ms ease , left 300ms ease;
+    animation: blink 2000ms ease infinite;  
+    z-index: -1;
+  }
+  @keyframes blink {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  .escape-top {
+    background-color : #6D99CE  ; 
+  }
+  .escape-bottom{
+    background-color: white;
+  }

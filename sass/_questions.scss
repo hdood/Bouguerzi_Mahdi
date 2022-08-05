@@ -1,0 +1,33 @@
+$question-background:#616972 ; 
+#questions {
+    color : white ; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    margin: 0 auto ;
+    width: 77%;
+    .question{
+        hr{
+            width: 90%;
+            margin: 0 auto ;
+        }
+        background-color: $question-background ;
+        padding: 0.2cm .4cm ;
+        border-radius: 12px;
+        box-shadow: 4px 6px 20px -7px rgba(0,0,0,0.75);
+        p{
+            font-size: 0.9rem;
+        }
+        #php {
+            color: rgb(214, 189, 255);
+        }
+        #vue{
+            color: #a5fdd4;
+        }
+        #sass{
+            color: #ffc4e0;
+        }
+
+    }
+}

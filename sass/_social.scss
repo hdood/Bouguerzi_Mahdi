@@ -1,0 +1,28 @@
+.social-link {
+	display:inline-block ;
+	text-align :center; 
+	width:2rem ; 
+	padding: 0.9mm 0.2cm;
+	color:white ; 
+	border-radius : 7px ;
+	font-size: 2rem ;
+	background:#6D99CE ;
+}
+#social{
+	display:flex ;
+	width: 1.3cm;
+	flex-direction : column ; 
+	position:fixed ; 
+	gap:1rem;
+	right:2%;
+	bottom:2rem ; 
+}
+.social-link:hover {
+    background-color: #92b2da;
+}
+@media only screen and (max-width: 600px) {
+
+	#social {
+		left :0 ;
+	}
+}

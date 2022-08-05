@@ -1,0 +1,386 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #616972;
+  height: 12vh;
+  box-shadow: 1px 6px 15px -10px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+nav #logo {
+  transform: translateY(-10%);
+}
+nav ul {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4%;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 10px 20px;
+  background-color: #6D99CE;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #F8F9D7;
+  transition: color 300ms ease;
+}
+nav li:hover {
+  background-color: #92b2da;
+}
+nav li:hover a {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 0;
+    place-items: center;
+  }
+  nav #logo {
+    transform: scale(0.8) translate(20%, -11%);
+  }
+  nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+  nav ul li {
+    padding: 8px 8px;
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+main #hero {
+  display: grid;
+  margin-top: 5%;
+  grid-template-columns: 60% 40%;
+  height: 100vh;
+}
+main #hero #profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main #hero #profile #im {
+  font-size: 1.953rem;
+  margin-top: 12vh;
+  margin-bottom: 3%;
+  width: 100%;
+  text-align: left;
+}
+main #hero #profile #name {
+  font-size: 2.441rem;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 3%;
+}
+main #hero #profile #job {
+  width: 100%;
+  margin-bottom: 3%;
+  text-align: left;
+  font-size: 3.052rem;
+}
+main #hero #profile #present {
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: left;
+}
+main #hero #photo {
+  background-color: #616972;
+  align-self: center;
+  justify-self: center;
+  height: 16rem;
+  width: 22rem;
+  border-radius: 15px;
+  box-shadow: 4px 6px 20px -7px rgba(0, 0, 0, 0.75);
+}
+main #hero #photo svg {
+  transform: translate(5%, -41%);
+}
+
+@media (max-width: 600px) {
+  main #hero {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 75%;
+    width: 80%;
+    gap: 0%;
+  }
+  main #hero #profile #im {
+    font-size: 1.3rem;
+  }
+  main #hero #profile #name {
+    margin-bottom: 3%;
+    font-size: 1.4rem;
+  }
+  main #hero #profile #job {
+    margin-bottom: 3%;
+    font-size: 1.5rem;
+  }
+  main #hero #profile #present {
+    font-size: 0.8rem;
+  }
+  main #hero #photo {
+    transform: scale(0.8);
+  }
+  main #hero #photo svg {
+    transform: scale(0.8) translate(8%, -40%);
+  }
+}
+.circle {
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: fixed;
+  opacity: 0.5;
+  transition: top 300ms ease, left 300ms ease;
+  animation: blink 2000ms ease infinite;
+  z-index: -1;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.escape-top {
+  background-color: #6D99CE;
+}
+
+.escape-bottom {
+  background-color: white;
+}
+
+#cards {
+  height: 100vh;
+  display: grid;
+  margin-top: -30%;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+#cards .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% 30%;
+  justify-self: center;
+  align-self: center;
+  height: 25.8rem;
+  width: 26rem;
+  border-radius: 15px;
+  box-shadow: 4px 6px 20px -7px rgba(0, 0, 0, 0.75);
+  background-color: #616972;
+}
+#cards .card .card-img {
+  border-radius: 15px 15px 0 0;
+  border-bottom: #6D99CE solid 8px;
+}
+#cards .card .card-img svg {
+  transform: translate(11%, -34%) scale(0.7);
+}
+#cards .card .card-text {
+  padding-top: 0.2cm;
+  color: white;
+  text-align: center;
+  font-size: 1.563rem;
+}
+#cards .card .card-text p {
+  font-size: 0.7rem;
+  line-height: 0.6cm;
+}
+#cards .card .card-text p span {
+  font-size: 1rem;
+}
+#cards .card .card-text p #php {
+  color: rgb(214, 189, 255);
+}
+#cards .card .card-text p #vue {
+  color: #a5fdd4;
+}
+#cards .card .card-text p #sass {
+  color: #ffc4e0;
+}
+
+@media screen and (max-width: 600px) {
+  #cards {
+    grid-template-columns: 1fr;
+  }
+  #cards .card {
+    width: 15rem;
+    height: 16rem;
+    grid-template-rows: 60% 40%;
+  }
+  #cards .card .card-img {
+    width: 15rem;
+  }
+  #cards .card .card-img svg {
+    transform: scale(0.5) translate(-30%, -97%);
+  }
+  #cards .card .card-text {
+    font-size: 1rem;
+  }
+  #cards .card .card-text p {
+    font-size: 0.5rem;
+    line-height: 0.4cm;
+  }
+  #cards .card .card-text p span {
+    font-size: 0.8rem;
+  }
+}
+#questions {
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 6%;
+  margin: 0 auto;
+  width: 77%;
+}
+#questions .question {
+  background-color: #616972;
+  padding: 0.2cm 0.4cm;
+  border-radius: 12px;
+  box-shadow: 4px 6px 20px -7px rgba(0, 0, 0, 0.75);
+}
+#questions .question hr {
+  width: 90%;
+  margin: 0 auto;
+}
+#questions .question p {
+  font-size: 0.9rem;
+}
+#questions .question #php {
+  color: rgb(214, 189, 255);
+}
+#questions .question #vue {
+  color: #a5fdd4;
+}
+#questions .question #sass {
+  color: #ffc4e0;
+}
+
+#contact {
+  margin: 0 auto;
+  width: 77%;
+  height: 100vh;
+  border: black solid 1px 6;
+  color: white;
+}
+#contact .contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  background-color: #616972;
+  width: 60%;
+  box-shadow: 4px 6px 20px -7px rgba(0, 0, 0, 0.75);
+  margin: 0 auto;
+  padding: 0.4cm;
+  border-radius: 12px;
+}
+#contact .contact-form input {
+  padding: 0.4cm;
+  width: 40%;
+  margin-right: 2%;
+  border-radius: 12px;
+  border: none;
+  font-family: myfont;
+  transition: outline 200ms ease;
+  margin: auto 0;
+}
+#contact .contact-form textarea {
+  display: block;
+  width: 88%;
+  margin: auto 0;
+  margin-top: 4%;
+  border-radius: 12px;
+  padding: 0.4cm;
+  font-family: myfont;
+  border: none;
+}
+#contact .contact-form button {
+  display: block;
+  width: 94%;
+  padding: 0.2cm;
+  border-radius: 12px;
+  border: none;
+  margin-top: 4%;
+  background-color: #6D99CE;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#contact .contact-form button:hover {
+  background-color: #92b2da;
+}
+#contact .contact-form input:focus, #contact .contact-form textarea:focus {
+  outline: 4px solid #6D99CE;
+}
+
+.social-link {
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  padding: 0.9mm 0.2cm;
+  color: white;
+  border-radius: 7px;
+  font-size: 2rem;
+  background: #6D99CE;
+}
+
+#social {
+  display: flex;
+  width: 1.3cm;
+  flex-direction: column;
+  position: fixed;
+  gap: 1rem;
+  right: 2%;
+  bottom: 2rem;
+}
+
+.social-link:hover {
+  background-color: #92b2da;
+}
+
+@media only screen and (max-width: 600px) {
+  #social {
+    left: 0;
+  }
+}
+@font-face {
+  font-family: myfont;
+  src: url(../fonts/LeagueSpartan-Bold.otf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6D99CE;
+  border-radius: 5px;
+}
+
+body {
+  font-family: myfont;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #4B5056;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=styles.css.map */
